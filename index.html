@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="PostulaIA compara un perfil junior con una oferta laboral usando inteligencia artificial.">
+  <title>PostulaIA | Analizador laboral</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="PostulaIA, inicio">
+      <span class="brand-mark">P</span>
+      <span>PostulaIA</span>
+    </a>
+    <span class="status"><i></i> IA conectada</span>
+  </header>
+
+  <main id="inicio">
+    <section class="hero">
+      <p class="eyebrow">Orientación laboral con IA</p>
+      <h1>Descubrí qué tan cerca estás de tu próxima oportunidad.</h1>
+      <p>Compará tu perfil con una oferta real y obtené fortalezas, brechas y un plan concreto para mejorar.</p>
+    </section>
+
+    <section class="workspace">
+      <form id="analysis-form" class="panel form-panel">
+        <div class="panel-heading">
+          <span class="step">01</span>
+          <div>
+            <h2>Perfil y oferta</h2>
+            <p>Completá los datos que analizará Gemini.</p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <label>Nombre
+            <input name="nombre" value="Candidato junior" required>
+          </label>
+          <label>Ubicación
+            <input name="ubicacion" value="CABA" required>
+          </label>
+        </div>
+
+        <label>Objetivo profesional
+          <input name="objetivo" value="Desarrollador Full Stack Junior" required>
+        </label>
+
+        <label>Tecnologías
+          <input name="tecnologias" value="HTML, CSS, Bootstrap, Sass, Git, GitHub" required>
+        </label>
+
+        <label>Educación
+          <input name="educacion" value="Diplomatura en Coderhouse" required>
+        </label>
+
+        <label>Proyecto destacado
+          <textarea name="proyecto" rows="3" required>99 Pilchas: sitio web responsive de indumentaria desarrollado de forma individual.</textarea>
+        </label>
+
+        <label>Oferta laboral
+          <textarea name="oferta" rows="6" required>Desarrollador Full Stack Jr. Requisitos: HTML, CSS, JavaScript, SQL, Node.js, Git y conocimientos de despliegue. Modalidad híbrida en Martínez.</textarea>
+        </label>
+
+        <button id="submit-button" type="submit">
+          <span>Analizar compatibilidad</span>
+          <b aria-hidden="true">→</b>
+        </button>
+        <p id="form-message" class="form-message" role="status"></p>
+      </form>
+
+      <section id="result-panel" class="panel result-panel empty" aria-live="polite">
+        <div id="empty-state" class="empty-state">
+          <span class="radar"></span>
+          <h2>Tu análisis aparecerá acá</h2>
+          <p>La IA evaluará coincidencias sin inventar experiencia ni estudios.</p>
+        </div>
+
+        <div id="result-content" hidden>
+          <div class="score-row">
+            <div>
+              <p class="eyebrow">Compatibilidad</p>
+              <h2 id="compatibility-level">—</h2>
+            </div>
+            <div class="score">
+              <strong id="score-value">0</strong><span>/100</span>
+            </div>
+          </div>
+          <div class="meter"><i id="score-bar"></i></div>
+
+          <article>
+            <h3>Diagnóstico</h3>
+            <p id="recommendation"></p>
+          </article>
+
+          <div class="result-grid">
+            <article class="good">
+              <h3>Fortalezas</h3>
+              <ul id="strengths"></ul>
+            </article>
+            <article class="gap">
+              <h3>Brechas</h3>
+              <ul id="gaps"></ul>
+            </article>
+          </div>
+
+          <article>
+            <h3>Plan de 30 días</h3>
+            <ol id="plan"></ol>
+          </article>
+
+          <article class="cv">
+            <h3>Resumen para CV</h3>
+            <p id="cv-summary"></p>
+          </article>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <footer>Proyecto académico · Coderhouse · Make + Google Gemini AI</footer>
+  <script src="app.js"></script>
+</body>
+</html>

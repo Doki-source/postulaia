@@ -187,6 +187,7 @@ button[type="submit"]:disabled { opacity: .65; cursor: wait; }
 .form-message { min-height: 20px; margin: 12px 0 0; color: var(--muted); font-size: .85rem; }
 
 .result-panel { position: sticky; top: 20px; min-height: 520px; }
+.result-panel:not(.empty) .empty-state { display: none; }
 .empty-state { display: grid; place-items: center; min-height: 450px; text-align: center; }
 .empty-state h2 { margin: 20px 0 5px; }
 .empty-state p { max-width: 320px; color: var(--muted); }

@@ -2,7 +2,7 @@
 
 Proyecto final de **Introducción a la Inteligencia Artificial**.
 
-**Aplicación:** https://doki-source.github.io/postulaia/
+**Aplicación:** https://santimachuca.github.io/postulaia/
 
 ## Problema elegido
 
